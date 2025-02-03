@@ -5,6 +5,7 @@ This project implements a fully automated **CI/CD pipeline** using AWS services 
 
 
 ![צילום מסך 2025-02-03 042032]( https://github.com/user-attachments/assets/37c2d862-cd85-481e-93e1-9f81b51f9ae9)
+<img src="https://github.com/user-attachments/assets/37c2d862-cd85-481e-93e1-9f81b51f9ae9" width="500"/>
 
 
 ### Key Services Used:
