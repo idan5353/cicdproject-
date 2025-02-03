@@ -47,3 +47,4 @@ This project demonstrates a full CI/CD pipeline with AWS services and Docker. Th
 
 For any questions or issues, feel free to open an issue or submit a pull request! 😄
 
+![build](https://github.com/user-attachments/assets/a2ce4145-95e0-4664-aab3-129f52b5fef0)
