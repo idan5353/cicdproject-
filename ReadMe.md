@@ -2,10 +2,7 @@
 
 ## Project Overview 🌟
 This project implements a fully automated **CI/CD pipeline** using AWS services such as **ECS (Elastic Container Service)**, **CodePipeline**, **CodeBuild**, **ECR (Elastic Container Registry)**, and **Fargate** to build, push, and deploy a Dockerized Node.js application.
-
-
-
-<br>
+<br><br><br>
 
 <img src="https://github.com/user-attachments/assets/37c2d862-cd85-481e-93e1-9f81b51f9ae9" width="500"/>
 
