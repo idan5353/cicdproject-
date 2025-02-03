@@ -4,7 +4,7 @@ const port = 3000;
 
 // נתיב ראשי
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Hello World! idan');
 });
 
 // נתיב להחזרת רשימת משתמשים
