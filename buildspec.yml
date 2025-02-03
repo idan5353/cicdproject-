@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+      - yum install -y docker
+  build:
+    commands:
+      - echo Building Docker image...
+      - docker build -t my-node-api .
+      - echo "Logging in to ECR..."
+      - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 851725642392.dkr.ecr.us-west-2.amazonaws.com
+      - docker tag my-node-api:latest 851725642392.dkr.ecr.us-west-2.amazonaws.com/node-api-repo:latest
+      - docker push 851725642392.dkr.ecr.us-west-2.amazonaws.com/node-api-repo:latest
+      - |
+        echo '[ 
+        { 
+          "name": "latest", 
+          "imageUri": "851725642392.dkr.ecr.us-west-2.amazonaws.com/node-api-repo:latest" 
+        } ]' > imagedefinitions.json
+  post_build:
+    commands:
+      - echo "Uploading imagedefinitions.json to S3..."
+artifacts:
+  files:
+    - '**/*'
+    - imagedefinitions.json
+  discard-paths: yes
